@@ -1,19 +1,22 @@
 var apiKey = require('./../.env').apiKey;
 
-function gitSearch(){};
+//function gitSearch(){};
+// replace above with the below..
+gitSearch = function(){};
 
 gitSearch.prototype.hello = function(){
   console.log("hello there");
-}
+};
 
-  gitSearch.prototype.getUserRepos = function(){
-    $.get('https://api.github.com/users/kenNg1?access_token=' + apiKey).then(function(response){
-      console.log(response);
-    }).fail(function(error){
-      console.log(error.responseJSON.message);
-    });
+// creates an object and returns it to stage [2]
+  gitSearch.prototype.getUserRepos = function(username){
+    return $.get('https://api.github.com/users/'+username+'?access_token=' + apiKey);
   };
 
-//https://api.github.com/users/kenNg1?access_token=e2d14a028d4e064a1ca04c8d1fb4ff2e4c8a3676
+  gitSearch.prototype.getRepos =
+  function(username){
+    return $.get('https://api.github.com/users/'+username+'/repos');
+  };
+
 
 exports.gitsearchmodule = gitSearch;
