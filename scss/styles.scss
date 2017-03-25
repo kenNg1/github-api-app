@@ -3,19 +3,15 @@ html {
   min-height: 1000px;
 }
 
+p {
+  margin: 0px
+}
+
 .container {
   padding: 50px;
 }
 
 .leftpanel{
-}
-
-.headers {
-  font-weight: bold
-}
-
-.info {
-  list-style: none;
 }
 
 .projects {
@@ -26,4 +22,14 @@ html {
   height: 300px;
   padding: 50px;
   margin-left: -100px;
+}
+
+#gitname {
+  font-size: 22px;
+  font-weight: bold
+}
+
+#gituser {
+  font-size: 20px;
+  font-weight: lighter
 }
