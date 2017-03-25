@@ -21,5 +21,4 @@ gitSearch.prototype.hello = function(){
     return $.get('https://api.github.com/users/'+username+'/repos');
   };
 
-
 exports.gitsearchmodule = gitSearch;
